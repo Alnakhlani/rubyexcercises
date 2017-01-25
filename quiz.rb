@@ -66,10 +66,48 @@ def ask_user(quiz)
     ask_user(quiz)
   end
 end
-want_quiz = ask_user("Are your ready for a quiz? [y/n]")
+want_quiz = ask_user("Are you ready for a quiz? [y/n]")
 
-if want_quiz == false
-  puts "K.Bye.."
+if want_quiz == true
+  puts "Okay, here it comes."
+  else
+  puts "K. Bye!"
+  end
+  score=0
+if want_quiz == true
+  questionone = "\n \n \n Q1) What is the capital of Alaska? \n \t 1) Melbourne \n \t 2) Anchorage \n \t 3) Juneau "
+  puts questionone
+  print "> "
+  answerone=gets.chomp
+  else
   exit
 end
-puts "Okay, here it comes."
+if answerone == "3"
+  score += 1
+  puts "Correct!"
+  else
+  puts "Incorrect. The answer is Juneau."
+end
+questiontwo="\n \n \n Q2) Can you store the value \"cat\" in a variable of type int? \n \t 1) Yes \n \t 2) No"
+puts questiontwo
+print "> "
+answertwo = gets.chomp
+if answertwo == "2"
+  score += 1
+  puts "Correct!"
+  else
+  puts "Sorry, \"cat\" is a string. Ints can only store numbers."
+end
+questionthree = "\n \n \n Q3) What is the result of 9+6/3? \n \t 1) 5 \n \t 2) 11 \n \t 3) 15/3"
+puts questionthree
+print "> "
+answerthree = gets.chomp
+if answerthree == "2"
+  score += 1
+  puts "Correct!"
+  else
+  puts "Incorrect. The answer is 2."
+end
+
+print "You have got #{score} out of 3 correct! "
+print "Thanks for playing!"

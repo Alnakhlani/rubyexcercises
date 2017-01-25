@@ -16,4 +16,3 @@
   else
     puts object
   end
-end
