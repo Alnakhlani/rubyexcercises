@@ -33,13 +33,27 @@ class Dogs
       @owner = owner_name
       @behaviour = behaviour
   end
+  def eat
+    puts "#{name} eats garbage."
+  end
+  def bark
+   puts "#{name} barks when angry."
+  end
+  def sleep
+    puts "#{name} sleeps around noon."
+  end
+  def play
+    puts "#{name} plays with kittens."
+  end
 end
-dog1 = dogs.new("boxer", "travis","bushra", "friendly")
-dog2 = dogs.new("terrier", "fran", "laura", "not friendly")
-dog3 = dogs.new("beagle", "leila", "chiara", "friendly")
-dog4 = dogs.new("bulldog", "nana", "angelique", "not friendly")
+dog1 = Dogs.new("boxer", "travis","bushra", "friendly")
+dog2 = Dogs.new("terrier", "fran", "laura", "not friendly")
+dog3 = Dogs.new("beagle", "leila", "chiara", "friendly")
+dog4 = Dogs.new("bulldog", "nana", "angelique", "not friendly")
 
-def eat
-  puts "#{name} eats garbage."
-end
+puts "the dogs currently at the daycare are:\n#{dog1.name}, #{dog2.name}, #{dog3.name} and #{dog4.name}."
+
 dog1.eat
+dog2.bark
+dog3.sleep
+dog4.play
